@@ -30,7 +30,7 @@ class AutomatedHotelScraper:
             num_competitors: Number of competitor hotels to find
         """
         # Initialize tools
-        self.web_scraper = WebScraper(use_browser=True, headless=False)  # Changed to use_browser
+        self.web_scraper = WebScraper(use_browser=True, headless=False)  
         self.geo_tools = GeoTools()
         self.llm_controller = LLMController()
         
@@ -311,7 +311,7 @@ class AutomatedHotelScraper:
                     self.logger.info(f"Skipping subject hotel: {hotel_info['name']}")
                     continue
                 
-                # Relaxed filtering - just ensure it's probably a hotel
+                # Relaxed filtering
                 skip_words = ['maps', 'learn more', 'best', 'favorite', 'forum', 'reddit']
                 hotel_words = ['hotel', 'resort', 'inn', 'suites', 'hyatt', 'marriott', 'hilton', 'ritz']
 
@@ -584,8 +584,6 @@ class AutomatedHotelScraper:
                 maps_url = f"https://www.google.com/maps/search/{google_maps_search.replace(' ', '+')}"
                 
                 # Extract basic info from Google Maps
-                # This is simplified - in a real implementation, you would need 
-                # a more sophisticated method to extract data from Google Maps
                 self.logger.info(f"Trying Google Maps for location data: {maps_url}")
             
             # Calculate meeting space per key if we have both values

@@ -38,7 +38,7 @@ class LLMController:
             raise ValueError("Anthropic API key is required. Set ANTHROPIC_API_KEY environment variable or pass api_key.")
         
         self.client = anthropic.Anthropic(api_key=self.api_key)
-        self.model = "claude-3-opus-20240229"  # Using the most capable model
+        self.model = "claude-3-opus-20240229"  
     
     def extract_hotel_data(self, html_content: str, hotel_name: str, url: str) -> Dict[str, Any]:
         """
@@ -52,7 +52,7 @@ class LLMController:
         Returns:
             Dictionary containing extracted hotel data
         """
-        # Truncate HTML if too long (Claude has context limits)
+        
         if len(html_content) > 80000:
             html_content = html_content[:80000] + "... [TRUNCATED]"
         
@@ -75,7 +75,7 @@ class LLMController:
             # Extract JSON from the response
             message_content = response.content[0].text
             
-            # Find JSON content (between ```json and ```)
+            
             json_start = message_content.find("```json")
             json_end = message_content.rfind("```")
             
@@ -83,7 +83,7 @@ class LLMController:
                 json_content = message_content[json_start + 7:json_end].strip()
                 return json.loads(json_content)
             else:
-                # Try to parse the entire response as JSON
+                
                 try:
                     return json.loads(message_content)
                 except json.JSONDecodeError:
@@ -106,7 +106,7 @@ class LLMController:
         Returns:
             Dictionary containing extracted amenities data
         """
-        # Truncate HTML if too long
+        
         if len(html_content) > 80000:
             html_content = html_content[:80000] + "... [TRUNCATED]"
         
@@ -126,10 +126,10 @@ class LLMController:
                 ]
             )
             
-            # Extract JSON from the response
+            
             message_content = response.content[0].text
             
-            # Find JSON content (between ```json and ```)
+            
             json_start = message_content.find("```json")
             json_end = message_content.rfind("```")
             
@@ -137,7 +137,7 @@ class LLMController:
                 json_content = message_content[json_start + 7:json_end].strip()
                 return json.loads(json_content)
             else:
-                # Try to parse the entire response as JSON
+                
                 try:
                     return json.loads(message_content)
                 except json.JSONDecodeError:
@@ -160,7 +160,7 @@ class LLMController:
         Returns:
             Dictionary containing review summary and common themes
         """
-        # Truncate reviews if too long
+        
         if len(reviews_text) > 80000:
             reviews_text = reviews_text[:80000] + "... [TRUNCATED]"
         
@@ -180,10 +180,10 @@ class LLMController:
                 ]
             )
             
-            # Extract JSON from the response
+            
             message_content = response.content[0].text
             
-            # Find JSON content (between ```json and ```)
+            
             json_start = message_content.find("```json")
             json_end = message_content.rfind("```")
             
@@ -191,7 +191,7 @@ class LLMController:
                 json_content = message_content[json_start + 7:json_end].strip()
                 return json.loads(json_content)
             else:
-                # Try to parse the entire response as JSON
+                
                 try:
                     return json.loads(message_content)
                 except json.JSONDecodeError:
@@ -227,7 +227,7 @@ class LLMController:
         Returns:
             Hotel object populated with extracted data
         """
-        # Create hotel object with basic info
+        
         hotel = Hotel(
             name=extraction_results.get("hotel_name", "Unknown Hotel"),
             address=extraction_results.get("address", ""),
