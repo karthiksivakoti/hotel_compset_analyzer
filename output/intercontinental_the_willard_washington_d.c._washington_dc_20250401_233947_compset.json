@@ -1,0 +1,67 @@
+{
+  "location": "Washington, DC",
+  "num_hotels": 0,
+  "subject_hotel": {
+    "name": "InterContinental The Willard Washington D.C.",
+    "address": "1401 Pennsylvania Avenue NW, Washington, DC 20004",
+    "city": "Washington",
+    "state": "DC",
+    "country": "United States",
+    "brand_affiliation": "InterContinental",
+    "chain_scale": "Luxury",
+    "room_count": 335,
+    "suite_count": null,
+    "suite_percentage": null,
+    "year_built": null,
+    "year_renovated": null,
+    "latitude": 38.896383,
+    "longitude": -77.03237399999999,
+    "distance_from_subject": null,
+    "website": null,
+    "owner": null,
+    "management_company": null,
+    "amenities": {
+      "restaurants": [
+        {
+          "name": "Restaurant",
+          "type": "Restaurant"
+        }
+      ],
+      "bars_lounges": [],
+      "pool": "Yes",
+      "fitness_center": true,
+      "spa": true,
+      "business_center": true,
+      "club_lounge": false,
+      "parking_details": null,
+      "parking_cost": null,
+      "resort_fee": null,
+      "other_amenities": []
+    },
+    "meeting_space": {
+      "total_space_sf": null,
+      "total_rooms": null,
+      "largest_room_sf": null,
+      "largest_room_capacity": null,
+      "meeting_space_per_key": null
+    },
+    "room_types": [],
+    "reviews": [],
+    "nearby_demand_generators": [
+      "National Gallery of Art (art_gallery)",
+      "Busboys and Poets (art_gallery)",
+      "Corcoran School of the Arts & Design at GW (art_gallery)",
+      "Long View Gallery (art_gallery)",
+      "The Bhutan Foundation (art_gallery)",
+      "National Museum of Asian Art (art_gallery)",
+      "Pepco Edison Place Gallery (art_gallery)",
+      "Luther W. Brady Art Gallery (art_gallery)",
+      "JICC: Japan Information & Culture Center, Embassy of Japan (art_gallery)",
+      "Touchstone Gallery (art_gallery)"
+    ],
+    "exterior_photo_url": null,
+    "guestroom_photo_url": null,
+    "sources": {}
+  },
+  "competitor_hotels": []
+}

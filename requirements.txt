@@ -1,0 +1,23 @@
+# Core Dependencies
+anthropic
+beautifulsoup4
+folium
+Flask
+pandas
+Pillow
+requests
+selenium
+tkinter-tooltip
+geopy
+webdriver-manager
+playwright
+
+# Excel/PDF Generation
+openpyxl
+xlsxwriter
+reportlab
+
+# Utilities
+python-dotenv
+tqdm
+retry
